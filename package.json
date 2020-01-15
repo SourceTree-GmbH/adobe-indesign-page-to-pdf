@@ -4,8 +4,7 @@
   "description": "",
   "main": "page-to-pdf.jsx",
   "scripts": {
-    "lint": "jslint page-to-pdf.jsx",
-    "beautify": "js-beautify page-to-pdf.jsx",
+    "build": "mkdir -p dist && js-beautify page-to-pdf.jsx > dist/page-to-pdf.jsx",
     "test": "jslint page-to-pdf.jsx"
   },
   "author": "SourceTree GmbH",
