@@ -1,0 +1,16 @@
+{
+  "name": "adobe-indesign-page-to-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "page-to-pdf.jsx",
+  "scripts": {
+    "lint": "jslint page-to-pdf.jsx",
+    "beautify": "js-beautify page-to-pdf.jsx"
+  },
+  "author": "SourceTree GmbH",
+  "license": "MIT",
+  "devDependencies": {
+    "js-beautify": "^1.10.3",
+    "jslint": "^0.12.1"
+  }
+}
