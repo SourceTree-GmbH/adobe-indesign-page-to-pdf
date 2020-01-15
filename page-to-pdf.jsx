@@ -1,12 +1,17 @@
-var activeDocument = app.activeDocument;
+//GLOBALS
+var app, Folder, File, ExportFormat;
 
-var folder = Folder.selectDialog ("Choose a Folder");
+var activeDocument = app.activeDocument;
+var pageIndex;
+
+var folder = Folder.selectDialog("Choose a Folder");
 var oldPageRange = app.pdfExportPreferences.pageRange;
 
-for (var p = 0; p < activeDocument.pages.length; p++) {
-    var page = app.activeDocument.pages[p];
-    var pageNumber = p+1;
-    var file = new File(folder + "/" + activeDocument.name.substring(0, activeDocument.name.lastIndexOf('.')) + "-" + pageNumber + ".pdf");
+var page, pageNumber, file;
+for (pageIndex = 0; pageIndex < activeDocument.pages.length; pageIndex += 1) {
+    page = app.activeDocument.pages[pageIndex];
+    pageNumber = pageIndex + 1;
+    file = new File(folder + "/" + activeDocument.name.substring(0, activeDocument.name.lastIndexOf('.')) + "-" + pageNumber + ".pdf");
     app.pdfExportPreferences.pageRange = pageNumber.toString();
     app.activeDocument.exportFile(ExportFormat.PDF_TYPE, file);
 }

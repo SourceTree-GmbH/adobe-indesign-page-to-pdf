@@ -5,7 +5,8 @@
   "main": "page-to-pdf.jsx",
   "scripts": {
     "lint": "jslint page-to-pdf.jsx",
-    "beautify": "js-beautify page-to-pdf.jsx"
+    "beautify": "js-beautify page-to-pdf.jsx",
+    "test": "jslint page-to-pdf.jsx"
   },
   "author": "SourceTree GmbH",
   "license": "MIT",
